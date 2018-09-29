@@ -2,7 +2,7 @@
 ### Created: September 28, 2018
 ### Last Updated: September 28, 2018
 
-# Button Based Delay
+# Button Interrupt
 The codes in each folder are for their respective boards, the MSP430G2553 and MSP430F5529.  For each board a single LED is turned on and off with the press of a button.  The LED blinks at a constant rate declared in the code.  If the button is pressed when the LED is blinking it'll be turned off, then when the button is pressed the LED is turned back on.  
 
 ## MSP430G2553
