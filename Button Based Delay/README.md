@@ -1,12 +1,14 @@
+### Author: Jacob Okun
+### Created: September 28, 2018
+### Last Updated: September 28, 2018
+
 # Button Based Delay
-Now that you have begun to familiarize yourself with the TIMER modules, why don't we make an interesting change to our code from the last lab.
+The codes in each folder are for their respective boards, the MSP430G2553 and MSP430F5529.  The codes are very similar but are different because of the timer and register.  The MSP430G2553 uses CCR0, and TCTL, and the MSP430F5529 has to have the specific timer to be declared such as TA0CCR0, TA0CCTL0, and TA0CTL.  Both of these codes will initilly blink and LED until the button is pressed.  When the button is pressed the timer will start and and will stop when released.  When relased the LED will blink at the rate of how long the button was held.
 
-## Task
-Setup your microcontroller to initially blink and LED at a rate of 10Hz upon restarting or powering up. Then utilizing one of the buttons on board, a user should be able to set the delay or blinking rate of the LED by holding down a button. The duration in which the button is depressed should then become the new rate at which the LED blinks. As previously stated, you most likely will want to take advantage of the fact that TIMER modules exist and see if you can let them do a bulk of the work for you.
+## MSP430G2553
+The code for the MSP430G2553 will blink the LED at P1.0 until the button is pressed at P1.3.  The clock utilized is the SMCLK.
 
-### Extra Work
-## Reset Button
-What is a piece of electronics without a reset button? Instead of relying on resetting your processor using the built in reset circuitry, why not instead use another button to reset the rate back to 10Hz.
+## MSP430F5529
+The code for the MSP430F5529 will blink the LED at P1.0 until the button is pressed at P1.1.  The clock utilized is the ACLK.
 
-## Button Based Hertz
-Most likely using two buttons, what if instead of making a delay loop based on the time, the user could instead enter a mode where the number of times they pressed the button would become the number in Hz of the blinking rate? How do you think you would implement that with just one button?
+
